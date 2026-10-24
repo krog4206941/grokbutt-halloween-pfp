@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GROKBUTT Halloween PFP Maker</title>
+<meta name="description" content="Dress up GrokButt in 28 Halloween costumes or haunt your own PFP with GrokButt stickers. Free, runs in your browser, no uploads. Trick or Crop?">
+<meta name="theme-color" content="#0d0812">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GROKBUTT Halloween PFP Maker">
+<meta property="og:description" content="28 costumes, 17 spooky scenes, 40 stickers. Dress up GrokButt or haunt your own PFP. Trick or Crop?">
+<meta property="og:url" content="https://krog4206941.github.io/grokbutt-halloween-pfp/">
+<meta property="og:image" content="https://krog4206941.github.io/grokbutt-halloween-pfp/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@krog_420">
+<meta name="twitter:title" content="GROKBUTT Halloween PFP Maker">
+<meta name="twitter:description" content="Dress up GrokButt or haunt your own PFP. Free, in-browser, no uploads. Trick or Crop?">
+<meta name="twitter:image" content="https://krog4206941.github.io/grokbutt-halloween-pfp/card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="favicon.png" alt="" width="40" height="40"><div><h1>GROKBUTT <span>Halloween PFP Maker</span></h1><p class="tag">Trick or Crop? 28 costumes, zero limbs.</p></div></div>
+</header>
+<main class="app">
+  <section class="stage">
+    <div class="tabs mode" role="tablist">
+      <button id="modeDress" class="on" role="tab" data-mode="dress">🎃 Dress up GrokButt</button>
+      <button id="modeUpload" role="tab" data-mode="upload">🦇 Haunt my PFP</button>
+    </div>
+    <div class="canvasWrap" id="wrap"><canvas id="view" width="1000" height="1000" aria-label="PFP preview"></canvas><div class="hint" id="hint"></div></div>
+    <div class="stageBar">
+      <label class="circle"><input type="checkbox" id="circleToggle"> Circle crop preview</label>
+      <canvas id="mini" width="96" height="96" title="How it looks on your timeline"></canvas>
+    </div>
+    <div class="actions">
+      <button id="randomBtn" class="ghost">🎲 Randomize</button>
+      <button id="downloadBtn" class="primary">⬇ Download PNG</button>
+    </div>
+    <p class="fine">1000×1000 PNG. Everything happens in your browser: no server, no uploads.</p>
+  </section>
+  <section class="panel">
+    <div class="tabs cats" id="cats"></div>
+    <div id="panelBody" class="panelBody"></div>
+  </section>
+</main>
+<input type="file" id="fileIn" accept="image/*" hidden>
+<div class="modal" id="modal" hidden><div class="sheet"><img id="outImg" alt="Your GrokButt PFP"><p>Saved! On a phone, long-press the image to save it to Photos.</p><div class="row"><button id="shareBtn" class="ghost" hidden>Share</button><button id="closeModal" class="primary">Back to haunting</button></div></div></div>
+<div class="toast" id="toast"></div>
+<footer>Made by Krog &amp; Grok Bot · <span class="lore">No humans were cropped in the making of this PFP.</span></footer>
+<script src="meta.js"></script>
+<script src="art.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
